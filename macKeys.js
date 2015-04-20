@@ -27,13 +27,13 @@
 (function(){
     var saywho, isMac, webkit, mozilla, opera, kC;
     isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+    window.macKeys = {
+        cmdKey : false,
+        ctrlKey : false,
+        shiftKey : false,
+        altKey : false
+    };
     if (isMac) {
-        window.macKeys = {
-            cmdKey : false,
-            ctrlKey : false,
-            shiftKey : false,
-            altKey : false
-        };
         //browser detection, originates from: http://stackoverflow.com/questions/2400935/browser-detection-in-javascript
         saywho = (function(){
             var ua = navigator.userAgent, tem,
@@ -65,7 +65,6 @@
             } else if (kC === 18) {
                 macKeys.altKey = true;
             }
-            console.log(kC, macKeys);
         };
         window.onkeyup = function(e){
             kC = e.keyCode;
@@ -78,7 +77,6 @@
             } else if (kC === 18) {
                 macKeys.altKey = false;
             }
-            console.log(macKeys);
         };
     }
 })();
