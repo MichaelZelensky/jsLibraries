@@ -51,7 +51,7 @@
             if ((tem = ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1]);
             return { 'browser': M[0], 'version': M[1] };
         })();
-        webkit = (saywho.browser === 'Chrome' || navigator.sayswho.browser === 'Safari');
+        webkit = (saywho.browser === 'Chrome' || saywho.browser === 'Safari');
         mozilla = saywho.browser === 'Firefox';
         opera = saywho.browser === 'Opera';
         window.onkeydown = function(e){
