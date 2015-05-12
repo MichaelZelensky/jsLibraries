@@ -3,8 +3,7 @@
  *
  * DESCRIPTION
  *
- * Ctrl, Shift, Alt, Cmd buttons detector for Mac
- * to support corresponding event.ctrlKey, event.shiftKey, event.altKey which do not work on Mac
+ * Returns maximum z-index on page for all elements
  *
  * LICENSE
  *
@@ -14,13 +13,9 @@
  *
  * USAGE
  *
- * Just include this code into your JS or HTML and then check if key is pressed in your code, e.g.:
+ * Just include this code into your JS or HTML and then
  *
- * window.onclick = function (event) {
- *     if (event.ctrlKey || macKeys.ctrlKey) {
- *         //do something
- *     }
- * }
+ * var maxZIndex = getMaxZIndex();
  *
  */
 
