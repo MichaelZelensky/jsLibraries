@@ -31,7 +31,13 @@
         cmdKey : false,
         ctrlKey : false,
         shiftKey : false,
-        altKey : false
+        altKey : false,
+        reset : function(){
+            this.cmdKey = false;
+            this.ctrlKey = false;
+            this.shiftKey = false;
+            this.altKey = false;
+        }
     };
     if (isMac) {
         //browser detection, originates from: http://stackoverflow.com/questions/2400935/browser-detection-in-javascript
@@ -77,6 +83,9 @@
             } else if (kC === 18) {
                 macKeys.altKey = false;
             }
+        };
+        window.onblur = function(){
+            macKeys.reset();
         };
     }
 })();
